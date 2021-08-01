@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include('layouts/header'); -%>
+
+    <body>
+        <!-- Navigation -->
+        <%- include('layouts/navbar'); -%>
+
+        <!-- Page Header -->
+        <header class="masthead" style="background-image: url('/assets/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Clean Blog</h1>
+                            <span class="subheading">A blog theme by Start Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    
+                    <form action="/search" method="POST">
+                        <div class="form-floating">
+                            <input class="form-control" id="search" name="search" type="text" data-sb-validations="required" required />
+                            <label for="search">Search a post:</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A search term is required.</div>
+                        </div>
+                        <br />
+
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Search</button>
+                    </form>
+                    <br />
+                    
+                    <% for (let i = 0; i < blogposts.length; i++) { %>
+                    <!-- Post preview-->
+                        <div class="post-preview">
+                            <a href="/post/<%= blogposts[i]._id%>">
+                                <h2 class="post-title"><%= blogposts[i].title %></h2>
+                                <br/>
+                                <h3 class="post-subtitle"><%= blogposts[i].body %></h3>
+                                <p class="post-meta">By <%= blogposts[i].userid.username %> on 
+                                    <%= blogposts[i].datePosted.toLocaleDateString("es-AR") %> -
+                                    <%= blogposts[i].datePosted.toLocaleTimeString("es-AR").substring(0, 5) %>
+                                </p>
+                            </a>
+                        </div>
+                        <!-- Divider-->
+                        <hr class="my-4" />
+                    <% } %>
+                    
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <%- include('layouts/footer'); -%>
+
+        <!-- Scripts -->
+        <%- include('layouts/scripts'); -%>
+    </body>
+</html>

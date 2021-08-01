@@ -2,7 +2,7 @@
 
 Un backend de blog creando en Node y Express.
 
-![Imagen]()
+![Imagen](https://raw.githubusercontent.com/FedeHC/Clean-Blog/master/public/assets/img/capture.png)
 
 ## Instalación y ejecución
 

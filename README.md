@@ -1,6 +1,6 @@
 # Clean-Blog
 
-Un backend de blog creando en Node y Express.
+Un backend de un blog app, creando en Node, Express y MongoDB.
 
 ![Imagen](https://raw.githubusercontent.com/FedeHC/Clean-Blog/master/public/assets/img/capture.png)
 
@@ -23,7 +23,7 @@ Para ejecutar, basta con:
 node index.js
 ```
 
-El blog se mostrará en su navegador web como localhost.
+El blog se mostrará en su navegador web en localhost.
 
 ## Requisitos
 

@@ -4,6 +4,9 @@ Un backend de blog creando en Node y Express.
 
 ![Imagen](https://raw.githubusercontent.com/FedeHC/Clean-Blog/master/public/assets/img/capture.png)
 
+Este sistema fue creado siguiendo mis lecturas del libro [Beginning Node.js,
+Express & MongoDB Development](https://www.amazon.com/Beginning-Node-js-Express-MongoDB-Development/dp/9811480281/ref=sr_1_fkmr2_2), del autor [Greg Lim](https://github.com/greglim81). Este repositorio es la culminación de los ejercicios del libro (con excepción de los últimos 3 capítulos) como parte de mi aprendizaje de Node y Express, al cual incorporé unas pocas modificaciones propias que consideré necesarias.
+
 ## Instalación y ejecución
 
 * Descargar o clonar el presente repositorio;
